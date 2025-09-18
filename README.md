@@ -1,5 +1,6 @@
 # API Documentation
 This document provides an overview of the API routes for the [washing-cars project](https://abdelrhman-arfat.github.io/washing-cars/).
+# API Documentation
 
 ## Authentication
 
@@ -452,6 +453,302 @@ This document provides an overview of the API routes for the [washing-cars proje
         }
     }
     ```
+## Types and Brands Management
+
+### Overview
+The Types and Brands API allow user to show the brands and types fo the cars
+
+**Base URL** : `/api'
+
+### Get All Brands
+ **URL**: `GET /api/brands`
+- **Description**: Get all brands
+- **Headers**: `Authorization: Bearer {token}`
+- **Response**: 200 OK
+    ```json
+    {
+    "success": true,
+    "message": "brands retrieved successfully",
+    "data": {
+        "data": [
+            {
+                "id": 14,
+                "name_ar": "أكورا",
+                "name_en": "Acura",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 11,
+                "name_ar": "أودي",
+                "name_en": "Audi",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 13,
+                "name_ar": "إنفينيتي",
+                "name_en": "Infiniti",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 21,
+                "name_ar": "بورش",
+                "name_en": "Porsche",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 9,
+                "name_ar": "بي إم دبليو",
+                "name_en": "BMW",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 1,
+                "name_ar": "تويوتا",
+                "name_en": "Toyota",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 19,
+                "name_ar": "جاكوار",
+                "name_en": "Jaguar",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 17,
+                "name_ar": "جي إم سي",
+                "name_en": "GMC",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 16,
+                "name_ar": "جيب",
+                "name_en": "Jeep",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 23,
+                "name_ar": "سوبارو",
+                "name_en": "Subaru",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 25,
+                "name_ar": "سوزوكي",
+                "name_en": "Suzuki",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 7,
+                "name_ar": "شيفروليه",
+                "name_en": "Chevrolet",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 8,
+                "name_ar": "فورد",
+                "name_en": "Ford",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 22,
+                "name_ar": "فولفو",
+                "name_en": "Volvo",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 15,
+                "name_ar": "فولكس فاجن",
+                "name_en": "Volkswagen",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 18,
+                "name_ar": "كاديلاك",
+                "name_en": "Cadillac",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 5,
+                "name_ar": "كيا",
+                "name_en": "Kia",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 20,
+                "name_ar": "لاند روفر",
+                "name_en": "Land Rover",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 12,
+                "name_ar": "لكزس",
+                "name_en": "Lexus",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 6,
+                "name_ar": "مازدا",
+                "name_en": "Mazda",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 10,
+                "name_ar": "مرسيدس بنز",
+                "name_en": "Mercedes-Benz",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 24,
+                "name_ar": "ميتسوبيشي",
+                "name_en": "Mitsubishi",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 3,
+                "name_ar": "نيسان",
+                "name_en": "Nissan",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 2,
+                "name_ar": "هوندا",
+                "name_en": "Honda",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            },
+            {
+                "id": 4,
+                "name_ar": "هيونداي",
+                "name_en": "Hyundai",
+                "logo_url": "https://washing-cars.storage-te.com/images/default-brand-logo.png",
+                "is_active": true
+            }
+        ]
+    },
+    "errors": null
+}
+
+    ```
+### Get All Types
+ **URL**: `GET /api/types`
+- **Description**: Get all brands
+- **Headers**: `Authorization: Bearer {token}`
+- **Response**: 200 OK
+    ```json
+   {
+    "success": true,
+    "message": "types retrieved successfully",
+    "data": {
+        "data": [
+            {
+                "id": 4,
+                "name_ar": "بيك أب",
+                "name_en": "Pickup Truck",
+                "description_ar": "شاحنة صغيرة مع حوض مفتوح لنقل البضائع",
+                "description_en": "Light truck with open cargo bed",
+                "is_active": true
+            },
+            {
+                "id": 3,
+                "name_ar": "دفع رباعي",
+                "name_en": "SUV",
+                "description_ar": "سيارة رياضية متعددة الاستخدامات ذات دفع رباعي",
+                "description_en": "Sport Utility Vehicle with four-wheel drive capability",
+                "is_active": true
+            },
+            {
+                "id": 9,
+                "name_ar": "ستيشن واجن",
+                "name_en": "Station Wagon",
+                "description_ar": "سيارة طويلة مع مساحة تخزين كبيرة",
+                "description_en": "Extended car with large cargo space",
+                "is_active": true
+            },
+            {
+                "id": 1,
+                "name_ar": "سيدان",
+                "name_en": "Sedan",
+                "description_ar": "سيارة ركاب بأربعة أبواب مع صندوق منفصل للأمتعة",
+                "description_en": "Four-door passenger car with separate trunk compartment",
+                "is_active": true
+            },
+            {
+                "id": 6,
+                "name_ar": "كروس أوفر",
+                "name_en": "Crossover",
+                "description_ar": "سيارة تجمع بين ميزات السيدان والدفع الرباعي",
+                "description_en": "Vehicle combining sedan comfort with SUV versatility",
+                "is_active": true
+            },
+            {
+                "id": 5,
+                "name_ar": "كوبيه",
+                "name_en": "Coupe",
+                "description_ar": "سيارة رياضية بباب أو بابين مع تصميم انسيابي",
+                "description_en": "Sporty two-door car with sleek design",
+                "is_active": true
+            },
+            {
+                "id": 10,
+                "name_ar": "كوبيه رياضي",
+                "name_en": "Sports Coupe",
+                "description_ar": "سيارة رياضية عالية الأداء بتصميم جذاب",
+                "description_en": "High-performance sports car with attractive design",
+                "is_active": true
+            },
+            {
+                "id": 8,
+                "name_ar": "كونفرتيبل",
+                "name_en": "Convertible",
+                "description_ar": "سيارة قابلة لطي السقف للاستمتاع بالهواء الطلق",
+                "description_en": "Car with foldable roof for open-air driving",
+                "is_active": true
+            },
+            {
+                "id": 7,
+                "name_ar": "ميني فان",
+                "name_en": "Minivan",
+                "description_ar": "سيارة عائلية كبيرة تتسع لعدد كبير من الركاب",
+                "description_en": "Large family vehicle designed for passenger capacity",
+                "is_active": true
+            },
+            {
+                "id": 2,
+                "name_ar": "هاتشباك",
+                "name_en": "Hatchback",
+                "description_ar": "سيارة صغيرة مدمجة مع باب خلفي منحني",
+                "description_en": "Compact car with rear door that swings upward",
+                "is_active": true
+            }
+        ]
+    },
+    "errors": null
+}
+    ```
+
 
 ## Address Management
 
